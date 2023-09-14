@@ -1,0 +1,6 @@
+*.exe
+*.c
+.vscode/
+check.cpp
+check1.cpp
+check2.cpp
