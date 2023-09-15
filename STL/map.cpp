@@ -19,6 +19,6 @@ int main()
         cout << it.first << endl;
         cout << it.second << endl;
     }
-
+    // multiset has stores duplicate keys
     return 0;
 }
