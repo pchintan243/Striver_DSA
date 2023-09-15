@@ -19,6 +19,8 @@ int main()
         cout << it.first << endl;
         cout << it.second << endl;
     }
-    // multiset has stores duplicate keys
+    // multiset has stores duplicate keys but it is in sorted order.
+
+    // unorderd map stores unique keys but not in sorted order.
     return 0;
 }
