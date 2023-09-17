@@ -7,11 +7,10 @@ vector<int> moveZeros(int n, vector<int> a)
         {
             i++;
         }
-        else
-        {
-            swap(a[i], a[j]);
-            i++;
-            j++;
+        else {
+            if(i != j) 
+                swap(a[i],a[j]);
+            i++;j++;
         }
     }
     return a;
