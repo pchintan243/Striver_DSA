@@ -13,8 +13,8 @@ superiorElements(vector<int> &a)
         if (a[i] > maxi)
         {
             v.push_back(a[i]);
+            maxi = max(a[i], maxi);
         }
-        maxi = max(a[i], maxi);
     }
 
     sort(v.begin(), v.end());
