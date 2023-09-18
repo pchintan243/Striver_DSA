@@ -1,5 +1,5 @@
 // We have to find the consecutive elements in an array.
-
+// Batter approach
 int longestSuccessiveElements(vector<int> &a)
 {
     // Write your code here.
