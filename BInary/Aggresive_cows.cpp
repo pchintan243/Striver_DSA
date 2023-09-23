@@ -26,7 +26,7 @@ int aggressiveCows(vector<int> &stalls, int k)
     int n = stalls.size();
     sort(stalls.begin(), stalls.end());
 
-    int low = 0;
+    int low = 1;
     // Take high as last index - first index --> max number - min number
     int high = stalls[n - 1] - stalls[0];
 
