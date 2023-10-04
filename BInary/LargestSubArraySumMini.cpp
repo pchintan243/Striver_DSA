@@ -4,7 +4,7 @@ int findPair(vector<int> a, int mid)
 {
 
     int count = 1;
-    int last = 0;
+    long long last = 0;
     for (int i = 0; i < a.size(); i++)
     {
         if (last + a[i] <= mid)
