@@ -21,8 +21,14 @@ int smallDiv(vector<int> &arr, int mid)
 int smallestDivisor(vector<int> &arr, int limit)
 {
     // Write your code here.
+    int n = arr.size();
+
+    if (n > limit)
+        return -1;
+
     int low = 1;
-    int high = INT_MIN;
+    int high = *max_element(arr.begin(), arr.end());
+
     for (int i = 0; i < arr.size(); i++)
     {
         high = max(high, arr[i]);
