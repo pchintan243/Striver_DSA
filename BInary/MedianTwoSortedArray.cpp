@@ -1,3 +1,5 @@
+// Linear approach
+
 double median(vector<int> &a, vector<int> &b)
 {
     // Write your code here.
