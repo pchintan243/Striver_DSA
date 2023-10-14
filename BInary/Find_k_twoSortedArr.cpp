@@ -10,7 +10,10 @@ int kthElement(vector<int> &a, vector<int> &b, int n1, int n2, int k)
 
     int n = n1 + n2;
 
+    // If arr1->size is 6 & arr2->size is 5 and we have to find 7th element then we need at least 2 element from arr1
     int low = max(k - n2, 0);
+
+    // If arr1->size is 5 and we have to find 2nd element then we need to pick high as max(k, n1)
     int high = min(k, n1);
     int left = k;
 
