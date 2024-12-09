@@ -25,10 +25,8 @@ vector<vector<int>> zeroMatrix(vector<vector<int>> &mat, int n, int m) {
 	// Make row & col 0 if in first row or col has zero.
 	for(int i = 1; i < n; i++) {
         for (int j = 1; j < m; j++) {
-			if(mat[i][j] != 0) {
-				if(mat[0][j] == 0 || mat[i][0] == 0)  {
-					mat[i][j] = 0;
-				}				
+			if(mat[0][j] == 0 || mat[i][0] == 0)  {
+				mat[i][j] = 0;
 			}
 		}
     }
