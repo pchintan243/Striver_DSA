@@ -1,22 +1,34 @@
 class Solution {
-    int findMax(int[] arr, int n) {
+    int[] findMaxAndSum(int[] arr, int n) {
         int maxEl = Integer.MIN_VALUE;
+        int sum = 0;
 
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
             maxEl = Math.max(maxEl, arr[i]);
         }
 
-        return maxEl;
+        return new int[] {maxEl, sum}; // Return both values in an array
     }
 
-    int findSum(int[] arr, int n) {
-        int sum = 0;
 
-        for(int i = 0; i < n; i++) {
-            sum += arr[0];
+    Boolean findDays(int[] weights, int cap, int days) {
+        int daysCnt = 1; //First day.
+        int load = 0;
+        int n = weights.length; //size of array.
+        for (int i = 0; i < n; i++) {
+            if ((load + weights[i]) > cap) {
+                daysCnt += 1; //move to next day
+                load = weights[i]; //load the weight.
+            } else {
+                //load the weight on the same day.
+                load += weights[i];
+            }
         }
-
-        return sum;
+        if(daysCnt <= days) {
+            return true;
+        }
+        return false;
     }
 
     public int shipWithinDays(int[] weights, int days) {
@@ -24,11 +36,11 @@ class Solution {
         if(n < days) {
             return -1;
         }
-        int low = findMax(weights, n);
-        int high = findSum(weights, n);
+        int low = findMaxAndSum(weights, n)[0];
+        int high = findMaxAndSum(weights, n)[1];
 
         if(n == days) {
-            return high;
+            return low;
         }
 
         int ans = -1;
