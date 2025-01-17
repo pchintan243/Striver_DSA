@@ -1,8 +1,9 @@
-// Better Solution
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n1 = nums1.length;
         int n2 = nums2.length;
+        if (n1 > n2) 
+            return findMedianSortedArrays(nums2, nums1);
 
         int cnt = 0;
         int ind1el = -1;
@@ -27,7 +28,7 @@ class Solution {
                 i++;
             } else {
                 if(cnt == ind1) {
-                    ind1el = nums2[i];
+                    ind1el = nums2[j];
                 }
                 if(cnt == ind2) {
                     ind2el = nums2[j];
@@ -50,7 +51,7 @@ class Solution {
 
         while(j < n2) {
             if(cnt == ind1) {
-                ind1el = nums2[i];
+                ind1el = nums2[j];
             }
             if(cnt == ind2) {
                 ind2el = nums2[j];
@@ -60,7 +61,7 @@ class Solution {
         }
 
         if(n % 2 == 1) {
-            return ind2el;
+            return (double) ind2el;
         }
         return (double)((double) (ind1el + ind2el) / 2.0);
     }
