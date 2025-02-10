@@ -1,4 +1,4 @@
-class Solution {
+class 2D_DelAtPos {
     public Node deleteNode(Node head, int x) {
         // code here
         Node current = head;
