@@ -45,3 +45,26 @@ class 2D_RemoveDuplicates{
         return head;
     }
 }
+
+//3rd Approach
+class 2D_RemoveDuplicates{
+    Node removeDuplicates(Node head){
+        // Code Here.
+        if(head == null || head.next == null) return head;
+        
+        Node curr = head;
+        while(curr != null && curr.next != null) {
+            Node temp = curr.next;
+            while(temp != null && curr.data == temp.data) {
+                temp = temp.next;
+            }
+            curr.next = temp;
+            if(temp != null) {
+                temp.prev = curr;
+            }
+            curr = curr.next;
+        }
+        
+        return head;
+    }
+}
