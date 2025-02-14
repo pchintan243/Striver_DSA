@@ -36,7 +36,6 @@ class 2D_CopyListRandomPointer {
         Node dummy = new Node(-1);
         Node ans = dummy;
         curr = head;
-        Node temp = null;
         while(curr != null && curr.next != null) {
             ans.next = curr.next;
             curr.next = curr.next.next;
