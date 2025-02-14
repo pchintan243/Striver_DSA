@@ -29,7 +29,6 @@ class 2D_FlattingLL {
         }
         
         Node curr = root;
-        Node nextNode = root; // for next traversal
         Node dummy = new Node(-1);
         Node newList = dummy;
         while(curr != null) {
