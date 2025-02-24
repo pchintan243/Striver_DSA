@@ -5,12 +5,13 @@ class POWER {
         if(n == 1) 
             return x;
 
-        if(n < 0) {
+        long exp = n;
+        if (exp < 0) {
             x = 1 / x;
-            n = -n;
+            exp = -exp;
         }
 
-        double ans = myPow(x, n / 2);
+        double ans = myPow(x, (int) (exp / 2));
         if(n % 2 == 0) {
             ans = ans * ans;
         } else {
