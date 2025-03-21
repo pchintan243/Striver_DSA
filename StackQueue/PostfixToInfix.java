@@ -1,7 +1,6 @@
 class PostfixToInfix {
     static String postToInfix(String exp) {
         // code here
-        int left = 0;
         Stack<String> st = new Stack<>();
         String ans = "";
         for(char ch : exp.toCharArray()) {
