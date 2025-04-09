@@ -1,6 +1,7 @@
+import java.util.Arrays;
 class 09_04_2025_3375_MinToMakeK {
-    p 
-
+    public int minOperations(int[] nums, int k) {
+        Arrays.sort(nums);
         if(nums[0] < k) {
             return -1;
         }
