@@ -18,5 +18,6 @@ class CountGoodNum {
         }
 
         return (int)(findPow(5, (n + 1) / 2) * findPow(4, n / 2) % MOD);
+        // return (int) (Math.pow(5, (n + 1) / 2) * Math.pow(4, n / 2) % MOD);
     }
 }
