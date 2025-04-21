@@ -1,21 +1,17 @@
 class MaxSumFrontLast {
     public int maxScore(int[] cardScore, int k) {
         //your code goes here
-        int i = 0;
         int n = cardScore.length;
         int sum = 0;
-        int temp = k;
         int leftSum = 0;
-        while(temp != 0) {
-            leftSum += cardScore[i++];
-            temp--;
+        for(int i = 0; i < k; i++) {
+            leftSum += cardScore[i];
         }
         sum = leftSum;
-        while(k != 0) {
-            leftSum = leftSum - cardScore[k - 1] + cardScore[n - temp - 1];
+
+        for(int i = 0; i < k; i++) {
+            leftSum = leftSum + cardScore[n - i - 1] - cardScore[k - i - 1];
             sum = Math.max(sum, leftSum);
-            temp++;
-            k--;
         }
         return sum;
     }
