@@ -61,7 +61,8 @@ class SubArrMinRanges {
         for(int i = 0; i < n; i++) {
             int left = i - pre[i];
             int right = next[i] - i;
-            sum += (left * right * nums[i]);
+            sum += (long) left * (long) right * (long) nums[i];
+
         }
 
         return sum;
@@ -78,7 +79,7 @@ class SubArrMinRanges {
         for(int i = 0; i < n; i++) {
             int left = i - pre[i];
             int right = next[i] - i;
-            sum += (left * right * nums[i]);
+            sum += (long) left * (long) right * (long) nums[i];
         }
 
         return sum;
