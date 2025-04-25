@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
+
+// Brute Force
 class SubArrayWithKDiffInt {
     public int subarraysWithKDistinct(int[] nums, int k) {
         int n = nums.length;
