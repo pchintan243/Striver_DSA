@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 class SubsetSum-II {
     public void generateSum(int[] nums, List<List<Integer>> ans, List<Integer> temp, int ind) {
             ans.add(new ArrayList<>(temp));
