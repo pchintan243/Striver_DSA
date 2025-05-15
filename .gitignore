@@ -4,3 +4,6 @@
 check.cpp
 check1.cpp
 check2.cpp
+input.txt
+output.txt
+*.class
