@@ -8,3 +8,4 @@ input.txt
 output.txt
 *.class
 Main.java
+*.DS_STORE
