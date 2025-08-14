@@ -1,14 +1,15 @@
-package Java_Graphs.Hard;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-
-public class DetectCycleUndirectedGraph_BFS {
+class Solution {
     public boolean isCycle(int V, List<Integer>[] adj) {
+        boolean[] isVisited = new boolean[V];
         for(int i = 0; i < adj.length; i++) {
+            if(isVisited[i]) {
+                continue;
+            }
             Queue<int[]> q = new LinkedList<>();
             q.offer(new int[]{i, -1});
-            boolean[] isVisited = new boolean[V];
             while(!q.isEmpty()) {
                 int[] val = q.poll();
                 int vertices = val[0];

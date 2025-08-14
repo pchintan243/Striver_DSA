@@ -18,12 +18,13 @@ public class DetectCycleUndirectedGraph_DFS {
         return false;
     }
     public boolean isCycle(int V, List<Integer>[] adj) {
+        boolean[] isVisited = new boolean[V];
         for(int i = 0; i < adj.length; i++) {
-            boolean[] isVisited = new boolean[V];
-
-            boolean isCycle = dfs(i, adj, isVisited, -1);
-            if(isCycle) {
-                return true;
+            if (!isVisited[i]) {
+                boolean isCycle = dfs(i, adj, isVisited, -1);
+                if(isCycle) {
+                    return true;
+                }
             }
         }
         return false;
