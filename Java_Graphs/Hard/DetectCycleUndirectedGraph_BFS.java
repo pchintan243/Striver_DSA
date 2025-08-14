@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class DetectCycleUndirectedGraph {
+public class DetectCycleUndirectedGraph_BFS {
     public boolean isCycle(int V, List<Integer>[] adj) {
         for(int i = 0; i < adj.length; i++) {
             Queue<int[]> q = new LinkedList<>();
