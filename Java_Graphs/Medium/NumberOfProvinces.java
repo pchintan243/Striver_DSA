@@ -1,42 +1,28 @@
 package Java_Graphs.Medium;
-import java.util.ArrayList;
-import java.util.List;
 
 // It's same as Connected Components
-public class NumberOfProvinces {
-    void dfs(int ind, List<List<Integer>> adj, boolean[] isVisited) {
-        isVisited[ind] = true;
-        for(int i: adj.get(ind)) {
-            if(!isVisited[i]) {
-                dfs(i, adj, isVisited);
+class NumberOfProvinces {
+    void dfs(int i, boolean[] isVisited, int[][] isConnected, int n) {
+        isVisited[i] = true;
+        for(int k = 0; k < n; k++) {
+            if(!isVisited[k] && isConnected[i][k] == 1) {
+                dfs(k, isVisited, isConnected, n);
             }
         }
+    
     }
-    public int numProvinces(int[][] adj) {
-        int componentCnt = 0;
-        int n = adj.length;
+    public int findCircleNum(int[][] isConnected) {
+        int n = isConnected.length;
 
-        List<List<Integer>> mat = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            mat.add(new ArrayList<>());
-        }
-
-        for (int i = 0; i < n; i++) {
-            for(int j = 0; j < n; j++) {
-                if(adj[i][j] == 1 && i != j) {
-                    mat.get(i).add(j);
-                }
-            }
-        }
         boolean[] isVisited = new boolean[n];
-
+        int cnt = 0;
         for(int i = 0; i < n; i++) {
             if(!isVisited[i]) {
-                componentCnt++;
-                dfs(i, mat, isVisited);
+                dfs(i, isVisited, isConnected, n);
+                cnt++;
             }
         }
-        return componentCnt;
+
+        return cnt;
     }
 }
-
