@@ -1,5 +1,6 @@
 package BFS.Hard;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +10,7 @@ public class WordLadder_2_Optimized {
     public List<List<String>> findSequences(String beginWord, String endWord, List<String> wordList) {
         List<List<String>> ans = new ArrayList<>();
 
-        Map<String, Integer> mp = new LinkedHashMap<>();
+        Map<String, Integer> mp = new HashMap<>();
         mp.put(beginWord, 0);
 
         Queue<String> q = new LinkedList<>();
