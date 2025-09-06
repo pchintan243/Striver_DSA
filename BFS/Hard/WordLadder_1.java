@@ -10,12 +10,9 @@ public class WordLadder_1 {
     if (!wordSet.contains(targetWord)) {
       return 0;
     }
+    wordSet.remove(startWord);
     Queue<String> q = new LinkedList<>();
     q.offer(startWord);
-
-    Set<String> visited = new HashSet<>();
-    visited.add(startWord);
-
     int ladderLength = 1;
 
     while (!q.isEmpty()) {
@@ -39,9 +36,9 @@ public class WordLadder_1 {
 
             wordArr[j] = c;
             String newWord = new String(wordArr);
-            if(wordSet.contains(newWord) && !visited.contains(newWord)) {
+            if(wordSet.contains(newWord)) {
                 q.offer(newWord);
-                visited.add(newWord);
+                wordSet.remove(newWord);
             }
           }
           wordArr[j] = originalChar;
