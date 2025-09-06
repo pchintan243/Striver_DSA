@@ -20,6 +20,9 @@ public class WordLadder_2_Optimized {
 
         while (!q.isEmpty()) {
             String word = q.poll();
+            if(word.equals(endWord)) {
+                break;
+            }
             int steps = mp.get(word);
 
             char[] ch = word.toCharArray();
