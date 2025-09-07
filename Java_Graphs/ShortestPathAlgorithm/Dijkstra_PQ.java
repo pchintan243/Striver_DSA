@@ -33,3 +33,9 @@ public class Dijkstra_PQ {
     return ans;
   }
 }
+
+
+// Time Complexity:O(V + ElogV), where V is the number of vertices and E is the number of edges, due to
+// the priority queue operations and graph traversal. Also considering the two for loops, one for initialization and one
+// for replacing the Integer.MAX_VALUE
+// Space Complexity:O(V), where V is the number of vertices, due to the ans array and priority queue in the worst-case scenario.
