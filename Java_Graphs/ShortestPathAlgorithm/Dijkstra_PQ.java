@@ -2,7 +2,7 @@ package Java_Graphs.ShortestPathAlgorithm;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Dijkstra {
+public class Dijkstra_PQ {
   public int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S) {
 
     int[] ans = new int[V];
