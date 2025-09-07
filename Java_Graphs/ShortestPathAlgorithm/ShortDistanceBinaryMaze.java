@@ -48,3 +48,44 @@ public class ShortDistanceBinaryMaze {
     }
 }
 
+// Using simple Queue is faster because there is no weight or the different weight
+
+// class Solution {
+//     int shortestPath(int[][] grid, int[] source, int[] destination) {
+//         int[] delRow = new int[]{-1, 0, 0, 1};
+//         int[] delCol = new int[]{0, -1, 1, 0};
+//         int n = grid.length;
+//         int m = grid[0].length;
+
+//         int length = 0;
+//         Queue<int[]> q = new LinkedList<>();
+//         q.offer(source);
+
+//         boolean[][] isVisited = new boolean[n][m];
+//         int destRow = destination[0];
+//         int destCol = destination[1];
+
+//         while(!q.isEmpty()) {
+//             int qSize = q.size();
+//             for(int k = 0; k < qSize; k++) {
+//                 int[] val = q.poll();
+//                 int row = val[0];
+//                 int col = val[1];
+//                 if(row == destRow && col == destCol) {
+//                     return length;
+//                 }
+//                 for(int i = 0; i < 4; i++) {
+//                     int r = row + delRow[i];
+//                     int c = col + delCol[i];
+//                     if(r >= 0 && c >= 0 && r < n && c < m && !isVisited[r][c] && grid[r][c] == 1) {
+//                         q.offer(new int[]{r, c});
+//                         isVisited[r][c] = true;
+//                     }
+//                 }
+//             }
+//             length++;
+//         }
+//         return -1;
+//     }
+// }
+
