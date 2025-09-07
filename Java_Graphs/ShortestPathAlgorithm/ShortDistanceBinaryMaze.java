@@ -48,6 +48,9 @@ public class ShortDistanceBinaryMaze {
     }
 }
 
+// Time Complexity:O(n*m*log(n*m)) due to the priority queue operations visiting each cell and log(n*m) for heap operations.
+// Space Complexity:O(n*m) to store the distance matrix and the priority queue in the worst-case scenario.
+
 // Using simple Queue is faster because there is no weight or the different weight
 
 // class Solution {
@@ -89,3 +92,6 @@ public class ShortDistanceBinaryMaze {
 //     }
 // }
 
+
+// Time Complexity:O(m*n*4), where m and n are the dimensions of the grid, and 4 represents the four possible directions of movement in each cell.
+// Space Complexity:O(m*n), where m and n are the dimensions of the grid, used to store the visited array and the queue in the worst-case scenario where all cells are visited.
