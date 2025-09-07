@@ -46,3 +46,7 @@ public class CheapestFlightWithKStop {
     return cost[dst] == Integer.MAX_VALUE ? -1 : cost[dst];
   }
 }
+
+
+// Time Complexity:O(E * K) where E is the number of flights and K is the maximum number of stops allowed.
+// Space Complexity:O(n) due to the adjacency list and cost array, where n is the number of cities.
