@@ -1,4 +1,4 @@
-package Java_Graphs.ShortestPathAlgorithm;
+package Java_Graphs.MST;
 import java.util.Arrays;
 
 public class DisjointSet {
