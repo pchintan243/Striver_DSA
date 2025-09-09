@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+// Only Possible in Directed Graph
 public class KosarajusAlgo {
     /* Function to perform DFS for storing the 
     nodes in stack based on their finishing time */
