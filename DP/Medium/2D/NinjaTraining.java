@@ -21,3 +21,29 @@ public class NinjaTraining {
         return Math.max(dp[n - 1][0], Math.max(dp[n - 1][1], dp[n - 1][2]));
     }
 }
+
+// Space Optimization
+class NinjaTraining {
+    public int ninjaTraining(int[][] matrix) {
+        int n = matrix.length;
+
+        int first = matrix[0][0];
+        int sec = matrix[0][1];
+        int third = matrix[0][2];
+        for(int i = 1; i < n; i++) {
+            int temp = Math.max(sec, third);
+            int tempFirst = temp + matrix[i][0];
+
+            temp = Math.max(first, third);
+            int tempSec = temp + matrix[i][1];
+
+            temp = Math.max(first, sec);
+            int tempThird = temp + matrix[i][2];
+
+            first = tempFirst;
+            sec = tempSec;
+            third = tempThird;
+        }
+        return Math.max(first, Math.max(sec, third));
+    }
+}
