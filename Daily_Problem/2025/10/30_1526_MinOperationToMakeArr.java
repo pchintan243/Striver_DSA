@@ -1,6 +1,6 @@
 package Daily_Problem.2025.10;
 
-public class 1526_MinOperationToMakeArr {
+public class 30_1526_MinOperationToMakeArr {
     public int minNumberOperations(int[] target) {
         int ans = target[0];
         int n = target.length;
