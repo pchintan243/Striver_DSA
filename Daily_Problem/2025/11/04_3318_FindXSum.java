@@ -1,6 +1,6 @@
 package Daily_Problem.2025.11;
 
-class 03_3318_FindXSum {
+class 04_3318_FindXSum {
     public int[] findXSum(int[] nums, int k, int x) {
         int n = nums.length;
 
