@@ -2,7 +2,7 @@ package Daily_Problem.2025.11;
 import java.util.HashMap;
 import java.util.Map;
 
-class 04_3321_FindXSumKLongArr {
+class 05_3321_FindXSumKLongArr {
     public long[] findXSum(int[] nums, int k, int x) {
         int n = nums.length;
         long[] ans = new long[n - k + 1];
