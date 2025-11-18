@@ -1,0 +1,16 @@
+package Daily_Problem.2025.11;
+
+class 17_1437_Check1Distance {
+    public boolean kLengthApart(int[] nums, int k) {
+        final int n=nums.length;
+        int last=-100000000;
+        for(int i=0; i<n; i++){
+            if (nums[i]==1){
+                if (i-last-1<k) return false;
+                last=i;
+            }
+        }
+        return true;
+        
+    }
+}
