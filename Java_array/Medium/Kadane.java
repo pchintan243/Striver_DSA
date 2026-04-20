@@ -1,0 +1,31 @@
+package Medium;
+
+public class Kadane {
+    public int maxSubArray(int[] nums) {
+        int n = nums.length;
+        int ans = Integer.MIN_VALUE;
+        int sum = 0;
+        for(int i = 0; i < n; i++) {
+            sum += nums[i];
+            if(sum > ans) {
+                ans = sum;
+            } 
+            if(sum < 0) {
+                sum = 0;
+            }
+        }
+
+        sum = 0;
+        for(int i = n - 1; i >= 0; i--) {
+            sum += nums[i];
+            if(sum > ans) {
+                ans = sum;
+            }
+            if(sum < 0) {
+                sum = 0;
+            }
+        }
+
+        return ans;
+    }
+}
